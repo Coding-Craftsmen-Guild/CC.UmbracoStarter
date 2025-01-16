@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags for HTML & character encoding -->
+    <meta charset="utf-8" />
+
+    <!-- Use ViewBag values or your own logic for dynamic title & descriptions -->
+    <title>@ViewBag.Title - YourSiteName</title>
+    <meta name="description" content="@ViewBag.MetaDescription" />
+    <meta name="keywords" content="@ViewBag.MetaKeywords" />
+
+    <!-- Viewport for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Recommended to let search engines index and follow links on this page -->
+    <meta name="robots" content="index,follow" />
+
+    <!-- Canonical link (adjust URL and Action/Controller as necessary) -->
+    <link rel="canonical" href="https://www.example.com@Url.Action(" Index","Home")" />
+
+    <!-- Open Graph Tags (Facebook, LinkedIn, etc.) -->
+    <meta property="og:title" content="@ViewBag.Title" />
+    <meta property="og:description" content="@ViewBag.MetaDescription" />
+    <meta property="og:url" content="https://www.example.com@Url.Action(" Index","Home")" />
+    <meta property="og:type" content="website" />
+    <!-- You can replace the content below with dynamic or actual image URL -->
+    <meta property="og:image" content="https://www.example.com/images/og-image.jpg" />
+
+    <!-- Twitter Card Tags (Twitter) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="@ViewBag.Title" />
+    <meta name="twitter:description" content="@ViewBag.MetaDescription" />
+    <meta name="twitter:image" content="https://www.example.com/images/og-image.jpg" />
+
+    <!-- Favicon & Additional Meta (optional) -->
+    <link rel="icon" type="image/x-icon" href="~/favicon.ico" />
+    <!-- Include your CSS bundles/styles here -->
+    <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
+
+    @RenderSection("head", required: false)
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        @* Your header navigation, logo, etc. *@
+        <nav>
+            <!-- Navigation links or partial view -->
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main role="main" class="container">
+        @RenderBody()
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <!-- Footer content or partial view -->
+        <p>&copy; @DateTime.Now.Year - YourSiteName</p>
+    </footer>
+
+    <!-- Scripts at the bottom for performance -->
+    @RenderSection("scripts", required: false)
+</body>
+</html>

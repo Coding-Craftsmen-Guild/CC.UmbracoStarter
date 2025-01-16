@@ -1,0 +1,15 @@
+{
+  "name": "cc.umbracostarter",
+  "version": "1.0.0",
+  "description": "The starter for cc website",
+  "main": "main",
+  "scripts": {
+    "css:build": "npx tailwindcss -i ./CC.UmbracoStarter.Web/wwwroot/css/site.css -o ./CC.UmbracoStarter.Web/wwwroot/css/styles.css --minify",
+    "watch": "npx tailwindcss -i ./CC.UmbracoStarter.Web/wwwroot/css/site.css -o ./CC.UmbracoStarter.Web/wwwroot/css/styles.css --minify --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

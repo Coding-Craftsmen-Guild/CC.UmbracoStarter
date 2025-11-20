@@ -12,12 +12,15 @@ export type BackgroundProps = {
 }
 
 const Background: React.FC<BackgroundProps> = ({ bgVideo, bgImage }) => {
-  const className = 'absolute top-0 left-0 w-auto h-auto min-w-full min-h-full object-cover'
+  const className = '-z-10 absolute top-0 left-0 w-auto h-auto min-w-full min-h-full object-cover'
 
   if (bgVideo) {
     return (
       <Video
         className={className}
+        autoPlay={true}
+        muted={true}
+        loop={true}
         src={getUrlFromLink(bgVideo)}
         thumbnail={myImageLoader({ src: bgImage?.url ?? '' })}
       />

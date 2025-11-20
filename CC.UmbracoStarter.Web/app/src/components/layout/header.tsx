@@ -17,13 +17,13 @@ const Header: React.FC<Configuration> = props => {
   return (
     <motion.nav
       className={cn(
-        'fixed mx-auto inset-x-0 z-50 w-full text-white overflow-hidden',
+        'h-nav fixed mx-auto inset-x-0 z-50 w-full text-white overflow-hidden',
         isSticky && 'golden-border text-neutral-800'
       )}
       initial={{ opacity: 0, height: '0px' }}
       animate={{
         opacity: 1,
-        height: 'fit-content',
+        height: '64px',
         background: isSticky ? 'rgba(255, 255, 255, 0.85)' : 'transparent'
       }}
     >

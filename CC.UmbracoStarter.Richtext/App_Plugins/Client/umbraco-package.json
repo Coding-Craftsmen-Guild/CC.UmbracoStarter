@@ -1,0 +1,13 @@
+{
+    "$schema": "../../umbraco-package-schema.json",
+    "name": "Richtext Extensions",
+    "version": "0.1.0",
+    "extensions": [
+        {
+            "type": "bundle",
+            "alias": "CC.RichtextExtensions",
+            "name": "Richtext Extensions",
+            "js": "/App_Plugins/Client/my-library.es.js"
+        }
+    ]
+}

@@ -1,3 +1,4 @@
 export enum ComponentTypes {
-  ContainerComponent = 'containerComponent'
+  ContainerComponent = 'containerComponent',
+  RichtextComponent = 'richtextComponent'
 }

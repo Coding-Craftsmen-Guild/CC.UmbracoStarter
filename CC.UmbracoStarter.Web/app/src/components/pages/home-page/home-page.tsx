@@ -2,6 +2,7 @@
 
 import BlockGridContainer from '@/components/block-grid-container'
 import { PageProvider } from '@/contexts/PageContext'
+import '@/external/my-library.cjs.js'
 import { BlockGrid } from '@/types/delivery-api/block-grid.data-type'
 import { PageProps } from '@/types/delivery-api/global'
 import React from 'react'

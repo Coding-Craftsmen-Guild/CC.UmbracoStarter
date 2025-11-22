@@ -1,6 +1,7 @@
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   poweredByHeader: false,
-  transpilePackages: ['react-syntax-highlighter'],
+  transpilePackages: ['react-syntax-highlighter', "tiptap-extensions", "ui"],
   images: {
     loader: 'custom',
     loaderFile: './src/utils/image-loader.ts',
@@ -10,6 +11,6 @@ const nextConfig = {
       port: '44362',
     }]
   }
-}
+};
 
-export default nextConfig
+module.exports = nextConfig;

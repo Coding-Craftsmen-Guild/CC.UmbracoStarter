@@ -3,28 +3,13 @@ import { Inter } from 'next/font/google'
 import { getContentByUrlSlugPath } from '@/services/delivery-api.service'
 import { Page } from '@/types/delivery-api/global'
 import { getUrlFromLink } from '@/utils/data-types.utils'
-import { GetServerSideProps, Metadata } from 'next'
+import { Metadata } from 'next'
 import { ViewTransitions } from 'next-view-transitions'
 import { notFound } from 'next/navigation'
 import './globals.css'
 import './styles.scss'
 
 const inter = Inter({ subsets: ['latin'] })
-
-export const getServerSideProps: GetServerSideProps = async context => {
-  const slug = context.params?.slug as string[]
-  const response = await getContentByUrlSlugPath(slug)
-
-  if (!response.isSuccess && response.statusCode === 404) {
-    return { notFound: true }
-  }
-
-  return {
-    props: {
-      page: response.data
-    }
-  }
-}
 
 export async function generateMetadata({
   params
@@ -53,7 +38,22 @@ export async function generateMetadata({
   }
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ 
+  children,
+  params 
+}: { 
+  children: React.ReactNode
+  params?: { slug: string[] }
+}) {
+  // Handle 404s for invalid routes
+  if (params?.slug) {
+    const response = await getContentByUrlSlugPath(params.slug)
+    
+    if (!response.isSuccess && response.statusCode === 404) {
+      notFound()
+    }
+  }
+
   return (
     <html lang="en">
       <ViewTransitions>

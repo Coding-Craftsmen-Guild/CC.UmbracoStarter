@@ -7,7 +7,7 @@
             "type": "bundle",
             "alias": "CC.RichtextExtensions",
             "name": "Richtext Extensions",
-            "js": "/App_Plugins/Client/my-library.es.js"
+            "js": "/App_Plugins/Client/umb-tiptap.js"
         }
     ]
 }

@@ -8,9 +8,10 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true,
+    "ignoreDeprecations": "6.0",
     "baseUrl": ".",
     "paths": {
-      "tiptap-extensions": ["packages/tiptap-extensions/src"],
+      "umb-tiptap": ["packages/umb-tiptap/src"],
       "ui": ["packages/ui/src"]
     }
   },

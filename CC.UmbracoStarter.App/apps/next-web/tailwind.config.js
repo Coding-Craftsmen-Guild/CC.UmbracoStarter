@@ -3,7 +3,7 @@ module.exports = {
   content: [
     './src/**/*.{js,ts,jsx,tsx,mdx}',
     '../../packages/ui/src/**/*.{js,ts,jsx,tsx}',
-    '../../packages/tiptap-extensions/src/**/*.{js,ts,jsx,tsx}'
+    '../../packages/umb-tiptap/src/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
     extend: {
